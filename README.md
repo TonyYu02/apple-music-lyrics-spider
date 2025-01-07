@@ -10,7 +10,7 @@ This project use your own apple music subscription to get text lyrics from apple
 
 1. An Apple Account with Apple Music subscription
   
-2. ```sh pip install requests re ```
+2. ``` pip install requests re ```
 
 3. get your media-user-token from website
   
