@@ -2,7 +2,7 @@ import re
 import requests
 import xml.etree.ElementTree as ET
 
-website=str(input("songs url："))
+website=str(input("song url："))
 nation=str(input("account nation："))
 res_web = requests.get(website)
 match_id = re.search(r"i=(\d+)", res_web.text)
