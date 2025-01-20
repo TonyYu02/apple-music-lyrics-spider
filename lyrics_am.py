@@ -28,6 +28,13 @@ list = js['data']
 
 ttml_string = list[0]['attributes']['ttml']
 root = ET.fromstring(ttml_string)
-lyrics = [p.text for p in root.findall('.//{http://www.w3.org/ns/ttml}body//{http://www.w3.org/ns/ttml}p')]
-for line in lyrics:
-    print(line)
+lyrics = []
+for div in root.findall(".//{http://www.w3.org/ns/ttml}div"):
+    div_lyrics = []
+    for p in div.findall("{http://www.w3.org/ns/ttml}p"):
+        div_lyrics.append(p.text)
+    if div_lyrics:
+        lyrics.append("\n".join(div_lyrics))
+
+line = "\n\n".join(lyrics)
+print(line)
