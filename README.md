@@ -13,12 +13,12 @@ This project use your own apple music subscription to get text lyrics from apple
 2. ``` pip install requests re ```
 
 3. get your media-user-token from website
+
+   Open [Apple Music](https://music.apple.com/) and log in, open the Developer tools, Click `Application -> Storage -> Cookies -> https://music.apple.com`, find the cookie named `media-user-token`, copy to code.
   
-  Open [Apple Music](https://music.apple.com/) and log in, open the Developer tools, Click `Application -> Storage -> Cookies -> https://music.apple.com`, find the cookie named `media-user-token`, copy to code.
-  
-4. get Authorization from website
-  
-  go to console and type`MusicKit.getInstance().developerToken`, add them after `Bearer `
+5. get Authorization from website
+
+   go to console and type`MusicKit.getInstance().developerToken`, add them after `Bearer `(remind the space)
   
 
 ## Usage
